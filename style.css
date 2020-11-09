@@ -2,5 +2,58 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    line-height: 1.25;
 }
 
+.signup {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.signup__header img {
+    height: 40px;
+}
+
+.signup__container {
+    border-left: 10px solid hsl(50, 80%, 50%);
+    padding: 10px;
+}
+
+.signup__page {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.signup__heading h1 {
+    font-size: 48px;
+}
+
+.signup__heading p {
+    margin: 20px 0;
+}
+
+.signup__form {
+    width: 100%;
+}
+
+.signup__form__wrapper {
+    margin-bottom: 10px;
+}
+
+.signup__form__wrapper label {
+    font-weight: 700;
+}
+
+.signup__form__wrapper input{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.signup__background {
+    background-color: hsl(50, 80%, 60%);
+    background-image: url("assets/art-hero-flowers.png");
+    
+}
