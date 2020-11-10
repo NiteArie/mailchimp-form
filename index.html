@@ -24,7 +24,7 @@
                         <a href="#">Log in</a>
                     </p>
                 </section>
-                <form class="signup__form">
+                <form class="signup__form" method="POST">
                     <div class="signup__form__wrapper">
                         <label>
                             Email
@@ -42,9 +42,7 @@
                             <label for="password">Password</label>
                             <span>Show</span>
                         </div>
-                        <label>
-                            <input type="password" name="password" id="password">
-                        </label>
+                        <input type="password" name="password" id="password">
                         <div class="signup__form__wrapper__desc">
                             <ul>
                                 <li>One lowercase character</li>
@@ -58,12 +56,13 @@
                         </div>
                     </div>
                     <div class="signup__form__wrapper">
-                        <button>Sign Up</button>
-                        <div>
+                        <button disabled>Sign Up</button>
+                        <div class="signup__form__wrapper__noti">
                             <label>
-                                <input type="checkbox">
                                 I don't want to receive emails about new Mailchimp
                                 products, best practices, or special offers.
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
                             </label>
                         </div>
                     </div>

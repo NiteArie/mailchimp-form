@@ -3,11 +3,15 @@
 *::after {
     box-sizing: border-box;
     line-height: 1.25;
+    --highlightColor: hsl(220, 50%, 50%);
+    --backgroundColor: hsl(50, 100%, 70%); 
+    --greyColor: hsl(220, 10%, 70%);
 }
 
 .signup {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    height: 100vh;
 }
 
 .signup__header img {
@@ -15,7 +19,7 @@
 }
 
 .signup__container {
-    border-left: 10px solid hsl(50, 80%, 50%);
+    border-left: 10px solid var(--backgroundColor);
     padding: 10px;
 }
 
@@ -37,23 +41,142 @@
 }
 
 .signup__form__wrapper {
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
+
 
 .signup__form__wrapper label {
     font-weight: 700;
 }
 
 .signup__form__wrapper input{
+
+    margin-bottom: 20px;
+
     display: block;
     width: 100%;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid var(--greyColor);
+}
+
+.signup__form__wrapper__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup__form__wrapper__row {
+
+}
+
+.signup__form__wrapper__desc {
+    display: flex;
+}
+
+.signup__form__wrapper__desc ul {
+    flex: 1;
+}
+
+.signup__form__wrapper__desc ul li {
+    margin-left: 15px;
+    position: relative;
+    padding: 5px;
+}
+
+.signup__form__wrapper__desc ul li::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    left: -15px;
+    top: 10px;
+    background-color: var(--highlightColor);
+}
+
+.signup__form__wrapper:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup__form__wrapper button {
+    flex: 1;
+    font-size: 18px;
+}
+
+.signup__form__wrapper button:disabled {
+    border: 1px solid var(--greyColor);
+    color: var(--greyColor);
+    background-color: white;
+}
+
+
+.signup__form__wrapper__noti {
+    margin-left: 20px;
+    flex: 2;
+}
+
+.signup__form__wrapper__noti label {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start; */
+    display: block;
+    padding-left: 30px;
+
+    position: relative;
+
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.signup__form__wrapper__noti input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid var(--greyColor);
+    cursor: pointer;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.signup__form__wrapper__noti input[type='checkbox']:checked ~ .checkmark {
+    display: block;
+    background-color: var(--highlightColor);
+}
+
+.signup__form__wrapper__noti input[type='checkbox']:checked ~ .checkmark:after {
+    display: block;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.signup__policy {
+    margin-top: 40px;
+    line-height: 1.25;
 }
 
 .signup__background {
-    background-color: hsl(50, 80%, 60%);
+    background-color: var(--backgroundColor);
     background-image: url("assets/art-hero-flowers.png");
     
 }
