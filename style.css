@@ -31,6 +31,13 @@ body {
     padding: 10px;
 }
 
+@media only screen and (max-width: 500px) {
+    .signup__container {
+        border-left: none;
+        padding: 0;
+    }
+}
+
 .signup__page {
     width: 500px;
     margin: 20px auto;
