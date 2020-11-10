@@ -2,16 +2,24 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    line-height: 1.25;
     --highlightColor: hsl(220, 50%, 50%);
     --backgroundColor: hsl(50, 100%, 70%); 
     --greyColor: hsl(220, 10%, 70%);
+}
+
+body {
+    line-height: 1.25;
+    font-family: "Lato", sans-serif; 
 }
 
 .signup {
     display: grid;
     grid-template-columns: 2fr 1fr;
     height: 100vh;
+}
+
+.signup a {
+    color: var(--highlightColor);
 }
 
 .signup__header img {
@@ -34,6 +42,11 @@
 
 .signup__heading p {
     margin: 20px 0;
+    line-height: 1.25;
+}
+
+.signup__heading a {
+    text-decoration: none;
 }
 
 .signup__form {
@@ -62,13 +75,19 @@
     border: 1px solid var(--greyColor);
 }
 
+.signup__form__wrapper input:focus {
+    outline: 1px solid var(--highlightColor);
+}
+
 .signup__form__wrapper__row {
     display: flex;
     justify-content: space-between;
 }
 
-.signup__form__wrapper__row {
-
+.signup__form__wrapper__row span {
+    color: var(--highlightColor);   
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .signup__form__wrapper__desc {
