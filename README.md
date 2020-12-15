@@ -13,7 +13,7 @@ This static page was made for me to practice my skill using semantic HTML, prope
 
 ## Setup
 
-Live version: [https://github.com/NiteArie/mailchimp-form](https://nitearie.github.io/mailchimp-form/)
+Live version: [https://nitearie.github.io/mailchimp-form/](https://nitearie.github.io/mailchimp-form/)
 
 
 ## Status
